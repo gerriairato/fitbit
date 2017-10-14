@@ -1,2 +1,2 @@
-# fitbit
-fitbit user api
+# fitpay
+fitpay user api
