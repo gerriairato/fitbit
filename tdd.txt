@@ -1,0 +1,45 @@
+
+TDD: Users API
+
+(Note: there is a typo in the Pagination Example Request...the request
+       shows a limit=1, however the Example Response shows limit=2;
+       also an extra slash between v1 and users in the Example Request)
+
+
+API TESTS
+
+Get the first page of users.
+	1. get /users?limit=5&offset=0
+	2. validate no "prev" link is returned
+	3. validate max number of results is 5
+
+Status: Implemented in fitpay/test/user_test.js
+
+Get the second page of users.
+	1. get /users?limit=5&offset=5
+	2. validate "prev" link is returned
+	3. validate max number of results is 5
+
+Status: Implemented in fitpay/test/user_test.js
+
+Get the last page of users.
+	1. get /users?limit=2&offset=0
+	2. get the "last" link from result
+	3. validate number of results is total-(last offset)
+	4. validate no "next" link is returned
+
+Status: Implemented in fitpay/test/user_test.js
+
+Attempt to get an offset greater than the total
+	1. get the totalResults
+	2. get /user?limit=1&offset=<something greater than totalResults>
+	3. validate response code is 400 - Bad Request
+
+Status: Implemented in fitpay/test/user_test.js
+
+Attempt to use invalid credentials
+	1. set the token to an invalid value
+	2. get /user?limit=1&offset=0 using the invalid token
+	3. validate response code is 403 - Prohibited
+
+Status: Implemented in fitpay/test/user_test.js
