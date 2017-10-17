@@ -1,154 +1,111 @@
 {
-    "access_token": "eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3ZmRmODkyNS1iZjg5LTRlOGItYWEwNS01NzAzM2NiMzY3ZGQiLCJzdWIiOiJLZWhsTFpiTCIsImF1dGhvcml0aWVzIjpbInVzZXIucmVhZCIsInVzZXIud3JpdGUiLCJvcmdhbml6YXRpb25zLkVOR1RFU1QiLCJ1c2Vycy5yZWFkIiwidXNlcnMud3JpdGUiXSwic2NvcGUiOlsidXNlci5yZWFkIiwidXNlci53cml0ZSIsIm9yZ2FuaXphdGlvbnMuRU5HVEVTVCIsInVzZXJzLnJlYWQiLCJ1c2Vycy53cml0ZSJdLCJjbGllbnRfaWQiOiJLZWhsTFpiTCIsImNpZCI6IktlaGxMWmJMIiwiYXpwIjoiS2VobExaYkwiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjIxY2I5YjViIiwiaWF0IjoxNTA3OTI4MTYyLCJleHAiOjE1MDc5NzEzNjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiS2VobExaYkwiLCJ1c2VyIiwib3JnYW5pemF0aW9ucyIsInVzZXJzIl19.w734HbWeyQ0YzEf846doE8-aona4Sv2QFbft3Wbs-sHeW6obDgFl8SYwP3bXl92m3kEjTvv_ZasLSHWfg9E1zg8D7Yr2bU8G4MERNCPARBa1gI7TA7XUpZ0UDAlaMC0YaR2dC0P7-iJI_wnNxwjIKhGuNvNhEM5z6aO_ikj_SldYTj7JQKK7ynByL2NO7eBY_w8jv-Ia40FdWj6fWaGdqrSb64RsixTsAn3OkDP-AOTm9WRPpGzDSA6aKujpIaTb-JdFdq7EuOzExBnYJ6pstB3qaytO6zhPPMR6oE8auOZXEnlpHQ_SZU4SXpnr9ALL2GJ_-ct0DcZ3LSNhhWBDNA",
-    "first_page": {
-        "_links": {
-            "self": { "href": "https://api.qa.fitpay.ninja/users?limit=5&offset=0" },
-            "last": { "href": "https://api.qa.fitpay.ninja/users?limit=5&offset=95" },
-            "next": { "href": "https://api.qa.fitpay.ninja/users?limit=5&offset=5" }
-        },
-        "limit": 5,
-        "offset": 0,
-        "totalResults": 100,
-        "results": [ {
-            "_links": [{}],
-            "id": "e934b3b1-10bd-4d08-8a68-01eabf830a26",
-            "createdTs": "2017-09-18T19:16:35.969Z",
-            "createdTsEpoch": 1505762195969,
-            "lastModifiedTs": "2017-09-18T19:16:35.969Z",
-            "lastModifiedTsEpoch": 1505762195969,
-            "encryptedData": [{}],
-            "userId": "e934b3b1-10bd-4d08-8a68-01eabf830a26" },
-        {
-            "_links": [{}],
-            "id": "e20121fc-63dd-4348-8b68-2f45c75116dd",
-            "createdTs": "2017-09-18T19:16:35.888Z",
-            "createdTsEpoch": 1505762195888,
-            "lastModifiedTs": "2017-09-18T19:16:35.888Z",
-            "lastModifiedTsEpoch": 1505762195888,
-            "encryptedData": [{}],
-            "userId": "e20121fc-63dd-4348-8b68-2f45c75116dd" },
-        {
-            "_links": [{}],
-            "id": "ea2493fb-ce22-40dc-8d26-8c25792dcc22",
-            "createdTs": "2017-09-18T19:16:35.836Z",
-            "createdTsEpoch": 1505762195836,
-            "lastModifiedTs": "2017-09-18T19:16:35.836Z",
-            "lastModifiedTsEpoch": 1505762195836,
-            "encryptedData": [{}],
-            "userId": "ea2493fb-ce22-40dc-8d26-8c25792dcc22" },
-         {
-            "_links": [{}],
-            "id": "e0b959a2-ec6c-4c67-9e9c-fd078d4449c9",
-            "createdTs": "2017-09-18T19:16:35.748Z",
-            "createdTsEpoch": 1505762195748,
-            "lastModifiedTs": "2017-09-18T19:16:35.748Z",
-            "lastModifiedTsEpoch": 1505762195748,
-            "encryptedData": [{}],
-            "userId": "e0b959a2-ec6c-4c67-9e9c-fd078d4449c9" },
-         {
-            "_links": [{}],
-            "id": "6b51d1ae-63d1-400e-a694-5b4a153b5250",
-            "createdTs": "2017-09-18T19:16:35.721Z",
-            "createdTsEpoch": 1505762195721,
-            "lastModifiedTs": "2017-09-18T19:16:35.721Z",
-            "lastModifiedTsEpoch": 1505762195721,
-            "encryptedData": [{}],
-            "userId": "6b51d1ae-63d1-400e-a694-5b4a153b5250" } ] },
-    "second_page": { "_links": 
-   { "self": { "href": "https://api.qa.fitpay.ninja/users?limit=5&offset=5" },
-     "last": { "href": "https://api.qa.fitpay.ninja/users?limit=5&offset=95" },
-     "prev": { "href": "https://api.qa.fitpay.ninja/users?limit=5&offset=0" },
-     "next": { "href": "https://api.qa.fitpay.ninja/users?limit=5&offset=10" } },
-  "limit": 5,
-  "offset": 0,
-  "totalResults": 100,
-  "results": 
-   [ { "_links": [{}],
-       "id": "e934b3b1-10bd-4d08-8a68-01eabf830a26",
-       "createdTs": "2017-09-18T19:16:35.969Z",
-       "createdTsEpoch": 1505762195969,
-       "lastModifiedTs": "2017-09-18T19:16:35.969Z",
-       "lastModifiedTsEpoch": 1505762195969,
-       "encryptedData": [{}],
-       "userId": "e934b3b1-10bd-4d08-8a68-01eabf830a26" },
-     { "_links": [{}],
-       "id": "e20121fc-63dd-4348-8b68-2f45c75116dd",
-       "createdTs": "2017-09-18T19:16:35.888Z",
-       "createdTsEpoch": 1505762195888,
-       "lastModifiedTs": "2017-09-18T19:16:35.888Z",
-       "lastModifiedTsEpoch": 1505762195888,
-       "encryptedData": [{}],
-       "userId": "e20121fc-63dd-4348-8b68-2f45c75116dd" },
-     { "_links": [{}],
-       "id": "ea2493fb-ce22-40dc-8d26-8c25792dcc22",
-       "createdTs": "2017-09-18T19:16:35.836Z",
-       "createdTsEpoch": 1505762195836,
-       "lastModifiedTs": "2017-09-18T19:16:35.836Z",
-       "lastModifiedTsEpoch": 1505762195836,
-       "encryptedData": [{}],
-       "userId": "ea2493fb-ce22-40dc-8d26-8c25792dcc22" },
-     { "_links": [{}],
-       "id": "e0b959a2-ec6c-4c67-9e9c-fd078d4449c9",
-       "createdTs": "2017-09-18T19:16:35.748Z",
-       "createdTsEpoch": 1505762195748,
-       "lastModifiedTs": "2017-09-18T19:16:35.748Z",
-       "lastModifiedTsEpoch": 1505762195748,
-       "encryptedData": [{}],
-       "userId": "e0b959a2-ec6c-4c67-9e9c-fd078d4449c9" },
-     { "_links": [{}],
-       "id": "6b51d1ae-63d1-400e-a694-5b4a153b5250",
-       "createdTs": "2017-09-18T19:16:35.721Z",
-       "createdTsEpoch": 1505762195721,
-       "lastModifiedTs": "2017-09-18T19:16:35.721Z",
-       "lastModifiedTsEpoch": 1505762195721,
-       "encryptedData": [{}],
-       "userId": "6b51d1ae-63d1-400e-a694-5b4a153b5250" } ] },
-    "last_page": { "_links": 
-   { "self": { "href": "https://api.qa.fitpay.ninja/users?limit=5&offset=0" },
-     "last": { "href": "https://api.qa.fitpay.ninja/users?limit=5&offset=95" },
-     "prev": { "href": "https://api.qa.fitpay.ninja/users?limit=5&offset=90" } },
-  "limit": 5,
-  "offset": 0,
-  "totalResults": 100,
-  "results": 
-   [ { "_links": [{}],
-       "id": "e934b3b1-10bd-4d08-8a68-01eabf830a26",
-       "createdTs": "2017-09-18T19:16:35.969Z",
-       "createdTsEpoch": 1505762195969,
-       "lastModifiedTs": "2017-09-18T19:16:35.969Z",
-       "lastModifiedTsEpoch": 1505762195969,
-       "encryptedData": [{}],
-       "userId": "e934b3b1-10bd-4d08-8a68-01eabf830a26" },
-     { "_links": [{}],
-       "id": "e20121fc-63dd-4348-8b68-2f45c75116dd",
-       "createdTs": "2017-09-18T19:16:35.888Z",
-       "createdTsEpoch": 1505762195888,
-       "lastModifiedTs": "2017-09-18T19:16:35.888Z",
-       "lastModifiedTsEpoch": 1505762195888,
-       "encryptedData": [{}],
-       "userId": "e20121fc-63dd-4348-8b68-2f45c75116dd" },
-     { "_links": [{}],
-       "id": "ea2493fb-ce22-40dc-8d26-8c25792dcc22",
-       "createdTs": "2017-09-18T19:16:35.836Z",
-       "createdTsEpoch": 1505762195836,
-       "lastModifiedTs": "2017-09-18T19:16:35.836Z",
-       "lastModifiedTsEpoch": 1505762195836,
-       "encryptedData": [{}],
-       "userId": "ea2493fb-ce22-40dc-8d26-8c25792dcc22" },
-     { "_links": [{}],
-       "id": "e0b959a2-ec6c-4c67-9e9c-fd078d4449c9",
-       "createdTs": "2017-09-18T19:16:35.748Z",
-       "createdTsEpoch": 1505762195748,
-       "lastModifiedTs": "2017-09-18T19:16:35.748Z",
-       "lastModifiedTsEpoch": 1505762195748,
-       "encryptedData": [{}],
-       "userId": "e0b959a2-ec6c-4c67-9e9c-fd078d4449c9" },
-     { "_links": [{}],
-       "id": "6b51d1ae-63d1-400e-a694-5b4a153b5250",
-       "createdTs": "2017-09-18T19:16:35.721Z",
-       "createdTsEpoch": 1505762195721,
-       "lastModifiedTs": "2017-09-18T19:16:35.721Z",
-       "lastModifiedTsEpoch": 1505762195721,
-       "encryptedData": [{}],
-       "userId": "6b51d1ae-63d1-400e-a694-5b4a153b5250" } ] }
+	"access_token": "eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3ZmRmODkyNS1iZjg5LTRlOGItYWEwNS01NzAzM2NiMzY3ZGQiLCJzdWIiOiJLZWhsTFpiTCIsImF1dGhvcml0aWVzIjpbInVzZXIucmVhZCIsInVzZXIud3JpdGUiLCJvcmdhbml6YXRpb25zLkVOR1RFU1QiLCJ1c2Vycy5yZWFkIiwidXNlcnMud3JpdGUiXSwic2NvcGUiOlsidXNlci5yZWFkIiwidXNlci53cml0ZSIsIm9yZ2FuaXphdGlvbnMuRU5HVEVTVCIsInVzZXJzLnJlYWQiLCJ1c2Vycy53cml0ZSJdLCJjbGllbnRfaWQiOiJLZWhsTFpiTCIsImNpZCI6IktlaGxMWmJMIiwiYXpwIjoiS2VobExaYkwiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjIxY2I5YjViIiwiaWF0IjoxNTA3OTI4MTYyLCJleHAiOjE1MDc5NzEzNjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiS2VobExaYkwiLCJ1c2VyIiwib3JnYW5pemF0aW9ucyIsInVzZXJzIl19.w734HbWeyQ0YzEf846doE8-aona4Sv2QFbft3Wbs-sHeW6obDgFl8SYwP3bXl92m3kEjTvv_ZasLSHWfg9E1zg8D7Yr2bU8G4MERNCPARBa1gI7TA7XUpZ0UDAlaMC0YaR2dC0P7-iJI_wnNxwjIKhGuNvNhEM5z6aO_ikj_SldYTj7JQKK7ynByL2NO7eBY_w8jv-Ia40FdWj6fWaGdqrSb64RsixTsAn3OkDP-AOTm9WRPpGzDSA6aKujpIaTb-JdFdq7EuOzExBnYJ6pstB3qaytO6zhPPMR6oE8auOZXEnlpHQ_SZU4SXpnr9ALL2GJ_-ct0DcZ3LSNhhWBDNA",
+	"first_page": {
+		"_links": {
+			"self": {
+				"href": "https://api.qa.fitpay.ninja/users?limit=5&offset=0"
+			},
+			"last": {
+				"href": "https://api.qa.fitpay.ninja/users?limit=5&offset=95"
+			},
+			"next": {
+				"href": "https://api.qa.fitpay.ninja/users?limit=5&offset=5"
+			}
+		},
+		"limit": 5,
+		"offset": 0,
+		"totalResults": 100,
+		"results": {
+			"_links": [
+				{
+					
+				}
+			],
+			"id": "6b51d1ae-63d1-400e-a694-5b4a153b5250",
+			"createdTs": "2017-09-18T19:16:35.721Z",
+			"createdTsEpoch": 1505762195721,
+			"lastModifiedTs": "2017-09-18T19:16:35.721Z",
+			"lastModifiedTsEpoch": 1505762195721,
+			"encryptedData": [
+				{
+					
+				}
+			],
+			"userId": "6b51d1ae-63d1-400e-a694-5b4a153b5250"
+		}
+	},
+	"second_page": {
+		"_links": {
+			"self": {
+				"href": "https://api.qa.fitpay.ninja/users?limit=5&offset=5"
+			},
+			"first": {
+				"href": "https://api.qa.fitpay.ninja/users?limit=5&offset=0"
+			},
+			"last": {
+				"href": "https://api.qa.fitpay.ninja/users?limit=5&offset=95"
+			},
+			"prev": {
+				"href": "https://api.qa.fitpay.ninja/users?limit=5&offset=0"
+			},
+			"next": {
+				"href": "https://api.qa.fitpay.ninja/users?limit=5&offset=10"
+			}
+		},
+		"limit": 5,
+		"offset": 0,
+		"totalResults": 100,
+		"results": {
+			"_links": [
+				{
+					
+				}
+			],
+			"id": "6b51d1ae-63d1-400e-a694-5b4a153b5250",
+			"createdTs": "2017-09-18T19:16:35.721Z",
+			"createdTsEpoch": 1505762195721,
+			"lastModifiedTs": "2017-09-18T19:16:35.721Z",
+			"lastModifiedTsEpoch": 1505762195721,
+			"encryptedData": [
+				{
+					
+				}
+			],
+			"userId": "6b51d1ae-63d1-400e-a694-5b4a153b5250"
+		}
+	},
+	"last_page": {
+		"_links": {
+			"self": {
+				"href": "https://api.qa.fitpay.ninja/users?limit=5&offset=0"
+			},
+			"last": {
+				"href": "https://api.qa.fitpay.ninja/users?limit=5&offset=95"
+			},
+			"prev": {
+				"href": "https://api.qa.fitpay.ninja/users?limit=5&offset=90"
+			}
+		},
+		"limit": 5,
+		"offset": 0,
+		"totalResults": 100,
+		"results": {
+			"_links": [
+				{
+					
+				}
+			],
+			"id": "6b51d1ae-63d1-400e-a694-5b4a153b5250",
+			"createdTs": "2017-09-18T19:16:35.721Z",
+			"createdTsEpoch": 1505762195721,
+			"lastModifiedTs": "2017-09-18T19:16:35.721Z",
+			"lastModifiedTsEpoch": 1505762195721,
+			"encryptedData": [
+				{
+					
+				}
+			],
+			"userId": "6b51d1ae-63d1-400e-a694-5b4a153b5250"
+		}
+	}
 }

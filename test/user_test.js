@@ -10,7 +10,7 @@ var _ = require("underscore");
 // Author: Gerri Airato
 
 
-// adding mock data responses since the server is not responding
+// adding mock data responses since the server was not responding
 var mock_response = require("../mock_response.json");
 var use_mock = false;
 
@@ -57,17 +57,11 @@ var UserTestSuite = function() {
             }
         }
 
-//        return {
-//            'Authorization': auth,
-//            'Accept': 'application/json',
-//            'Accept-Charset': 'UTF-8',
-//            'Content-Type': 'application/json'
-//        };
-
         return {
             'Authorization': auth,
             'Accept': 'application/json',
-            'Accept-Charset': 'UTF-8'
+            'Accept-Charset': 'UTF-8',
+            'Content-Type': 'application/json'
         };
     }
 
@@ -125,16 +119,13 @@ var UserTestSuite = function() {
                 users_list = mock_response.first_page.results;
             } else {
                 var headers = getHeaders(bearer_auth);
-                console.log('headers: ', headers);
 
                 var url = users_api + "?limit=5&offset=0";
-                console.log('url: ', url);
 
                 var options = getOptions(url, "GET", headers);
 
                 var response = yield rp(options);
 
-                console.log('response.body: ', response.body);
                 var err_msg = response.statusCode + ': ' +
                     response.statusMessage + '\n';
                 expect(response.statusCode, err_msg).to.equal(200);
@@ -160,16 +151,13 @@ var UserTestSuite = function() {
                 users_list = mock_response.second_page.results;
             } else {
                 var headers = getHeaders(bearer_auth);
-                console.log('headers: ', headers);
 
                 var url = users_api + "?limit=5&offset=5";
-                console.log('url: ', url);
 
                 var options = getOptions(url, "GET", headers);
 
                 var response = yield rp(options);
 
-                console.log('response.body: ', response.body);
                 var err_msg = response.statusCode + ': ' +
                     response.statusMessage + '\n';
                 expect(response.statusCode, err_msg).to.equal(200);
@@ -178,8 +166,9 @@ var UserTestSuite = function() {
                 var users_list = response.body.results;
             }
 
-            expect(links.length).to.equal(4);
+            expect(links.length).to.equal(5);
             expect(_.contains(links, 'self')).to.be.true;
+            expect(_.contains(links, 'first')).to.be.true;
             expect(_.contains(links, 'last')).to.be.true;
             expect(_.contains(links, 'next')).to.be.true;
             expect(_.contains(links, 'prev')).to.be.true;
@@ -197,21 +186,18 @@ var UserTestSuite = function() {
             } else {
 
                 var headers = getHeaders(bearer_auth);
-                console.log('headers: ', headers);
 
                 var url = users_api + "?limit=5&offset=0";
-                console.log('url: ', url);
 
                 var options = getOptions(url, "GET", headers);
 
                 var response = yield rp(options);
 
-                console.log('response.body: ', response.body);
                 var err_msg = response.statusCode + ': ' +
                     response.statusMessage + '\n';
                 expect(response.statusCode, err_msg).to.equal(200);
 
-                var links = _.keys(response.body._links);
+                links = _.keys(response.body._links);
                 var last_url = response.body._links.last.href;
                 var total = response.body.totalResults;
                 var last_offset = last_url.slice(last_url.lastIndexOf("=") + 1);
@@ -219,18 +205,25 @@ var UserTestSuite = function() {
                 options = getOptions(last_url, "GET", headers);
                 response = yield rp(options);
                 last_page_results = response.body.results;
+                links = _.keys(response.body._links);
             }
-
+            expect(links.length).to.equal(3);
+            expect(_.contains(links, 'self')).to.be.true;
+            expect(_.contains(links, 'first')).to.be.true;
+            expect(_.contains(links, 'last')).to.be.false;
+            expect(_.contains(links, 'next')).to.be.false;
+            expect(_.contains(links, 'prev')).to.be.true;
             expect(last_page_results.length).to.equal(expected_items);
         }));
 
-        // commented out until server issues are resolved
-        xit('Attempt to get an offset greater than the total', Promise.coroutine(function*() {
-            var headers = getHeaders(bearer_auth);
-            console.log('headers: ', headers);
+        it('Attempt to get an offset greater than the total', Promise.coroutine(function*() {
+            if (use_mock) {
+            	return;
+            }
+            
+        	var headers = getHeaders(bearer_auth);
 
             var url = users_api + "?limit=5&offset=0";
-            console.log('url: ', url);
 
             var options = getOptions(url, "GET", headers);
 
@@ -238,7 +231,6 @@ var UserTestSuite = function() {
             // number of items
             var response = yield rp(options);
 
-            console.log('response.body: ', response.body);
             var err_msg = response.statusCode + ': ' +
                 response.statusMessage + '\n';
             expect(response.statusCode, err_msg).to.equal(200);
@@ -247,27 +239,27 @@ var UserTestSuite = function() {
             var last_url = response.body._links.last.href;
             var total = response.body.totalResults;
             var bad_url = users_api + "?limit=5&offset=" + (total + 5);
-            console.log('bad_url: ' + bad_url);
             options = getOptions(bad_url, "GET", headers);
             response = yield rp(options);
-            expect(response.statusCode, response.statusCode + ': ' + response.statusMessage + '\n').to.equal(400);
-
+            expect(response.statusCode, response.statusCode + ': ' + response.statusMessage + '\n').to.equal(200);
+            expect(response.body.results.length).to.equal(0);
         }));
 
-        // commented out until server issues are resolved
-        xit('Attempt to use invalid credentials', Promise.coroutine(function*() {
+        it('Attempt to use invalid credentials', Promise.coroutine(function*() {
+        	
+            if (use_mock) {
+            	return;
+            }
+            
             // make the call with basic auth instead of a token
             var headers = getHeaders(basic_auth);
-            console.log('headers: ', headers);
 
             var url = users_api + "?limit=5&offset=0";
-            console.log('url: ', url);
 
             var options = getOptions(url, "GET", headers);
 
             var response = yield rp(options);
 
-            console.log('response.body: ', response.body);
             var err_msg = response.statusCode + ': ' +
                 response.statusMessage + '\n';
             expect(response.statusCode, err_msg).to.equal(403);

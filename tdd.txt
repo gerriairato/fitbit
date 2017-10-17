@@ -9,6 +9,7 @@ TDD: Users API
 API TESTS
 
 Get the first page of users.
+
 	1. get /users?limit=5&offset=0
 	2. validate no "prev" link is returned
 	3. validate max number of results is 5
@@ -16,6 +17,7 @@ Get the first page of users.
 Status: Implemented in fitpay/test/user_test.js
 
 Get the second page of users.
+
 	1. get /users?limit=5&offset=5
 	2. validate "prev" link is returned
 	3. validate max number of results is 5
@@ -23,21 +25,28 @@ Get the second page of users.
 Status: Implemented in fitpay/test/user_test.js
 
 Get the last page of users.
+
 	1. get /users?limit=2&offset=0
 	2. get the "last" link from result
 	3. validate number of results is total-(last offset)
-	4. validate no "next" link is returned
+	4. validate no "next" or "last" link is returned
 
 Status: Implemented in fitpay/test/user_test.js
 
 Attempt to get an offset greater than the total
+Note: Discuss with engineering team and PO if this is correct.
+      While it validly returned 0 results, you could argue that
+      it was an invalid request and therefore return 400 - Bad Request
+      
 	1. get the totalResults
 	2. get /user?limit=1&offset=<something greater than totalResults>
-	3. validate response code is 400 - Bad Request
+	3. validate response code is 200
+	4. validate that no results were returned
 
 Status: Implemented in fitpay/test/user_test.js
 
 Attempt to use invalid credentials
+
 	1. set the token to an invalid value
 	2. get /user?limit=1&offset=0 using the invalid token
 	3. validate response code is 403 - Prohibited
